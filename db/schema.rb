@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2019_05_07_184323) do
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.integer "page_count"
-    t.datetime "year_published"
+    t.integer "year_published"
     t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
