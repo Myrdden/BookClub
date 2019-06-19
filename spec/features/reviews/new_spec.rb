@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "As a visitor" do
   describe "when i visit a books show page" do
-    it "can create a new review" do
+    xit "can create a new review" do
       title = "title 1"
       review = "test review"
       rating = 4

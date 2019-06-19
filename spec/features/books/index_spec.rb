@@ -58,7 +58,7 @@ RSpec.describe "As a visitor," do
       expect(current_path).to eq "/users"
     end
 
-    it "sees a title" do
+    xit "sees a title" do
       visit "/books"
 
       within("#book-title-#{@book1.id}") do

@@ -51,7 +51,9 @@ class BooksController < ApplicationController
 
   def create
     image_path = nil
-    image_path = params[:book][:image] if params[:book][:image] != ""
+    if params[:book]
+      image_path = params[:book][:image] if params[:book][:image] != ""
+    end
     new_book = Book.create({title: params[:book][:title].titleize, page_count: params[:book][:pages],
       year_published: "01-01-#{params[:book][:year]}".to_date, image_url: image_path})
     authors_list = params[:book][:authors].split(", ")
